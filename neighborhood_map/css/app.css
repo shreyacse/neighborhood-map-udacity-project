@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+#wrapper {
+    display: flex;
+}
+#nav {
+    flex: 0 0 auto;
+    width: 300px;
+    order: 1;
+    border-left: 1px solid black;
+    background: #154360;
+}
+.hide {
+    display: none;
+    visibility: hidden;
+}
+#nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#nav ul li {
+    display: block;
+    margin: 0;
+    text-align: center;
+    padding: 0.5rem 0.25rem;
+    margin: 0;
+    background-color: #FADBD8;
+    cursor: pointer;
+    border-bottom: 2px solid #191919;
+}
+#nav ul li.active {
+    background-color: red;
+}
+#nav .search {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0 1rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #ABB2B9;
+}
+#nav label {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+#map-container {
+    flex: 1 1 auto;
+    height: 100vh;
+    position: relative;
+}
+#map {
+    height: 100%;
+}
+
+.toggle-nav{
+    position: absolute;
+    z-index: 999;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .facet_sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .facet_sidebar {
+    display: none;
+  }
+}
+
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.spinner {
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 120, 255, 0.5);
+    box-shadow: 0px 0px 10px rgba(0, 120, 255, 0.5), inset 0px 0px 10px rgba(0, 120, 255, 0.5);
+    margin: 10px auto;
+    position: relative;
+}
+.spinner::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: -1px;
+    box-shadow: 0px 0px 7px 3px #0078ff;
+    /* background: rgba(0,120,255,0.75); */
+    -webkit-transform-origin: 100px 0;
+        transform-origin: 13px 0;
+    -webkit-animation: rotation linear 2s infinite;
+        animation: rotation linear 2s infinite;
+}

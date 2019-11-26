@@ -1,0 +1,22 @@
+{
+  "name": "Neighborhood Map",
+  "authors": [
+    "Shreya <shreyaparashar19@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "knockout": "^3.4.0",
+    "jquery": "^3.0.0"
+  }
+}

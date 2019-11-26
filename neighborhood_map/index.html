@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Neighborhood Map</title>
+
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <div id="wrapper" class="hide" data-bind="css: { hide: mapNotLoaded }">
+        <div id="nav" class="hide" data-bind="css: { hide: hideNav }">
+            <input id="search" class="search" type="text" data-bind="textInput: searchTerm" placeholder="Search locations by name...">
+            <ul>
+                <!-- ko foreach: filteredLocations -->
+                <li data-bind="text: name, css: { active: active }, click: selectLocation"></li>
+                <!-- /ko -->
+                <li data-bind="visible: filteredLocations().length == 0" style="cursor:auto;">No Results</li>
+            </ul>
+        </div>
+        <div id="map-container">
+            <div id="map"></div>
+            <button class="toggle-nav" data-bind="click: toggleNav">Menu</button>
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script type='text/javascript' src='bower_components/jquery/dist/jquery.min.js?ver=3.4.0'></script>
+    <script type='text/javascript' src='bower_components/knockout/dist/knockout.js?ver=3.0.0'></script>
+    <script type='text/javascript' src='js/app.js'></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhDYOkYTurgHSHY24AxY1jX06g0rg5RUQ&callback=app" async defer onerror="googleMapsApiErrorHandler();"></script>
+</body>
+
+</html>
